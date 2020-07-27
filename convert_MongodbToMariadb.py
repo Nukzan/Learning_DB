@@ -6,7 +6,7 @@ board_info = mydb.board.find()
 
 import pymysql
 
-conn = pymysql.connect(host = 'localhost', port = 3306, user = 'scott', passwd = 'tiger', db = 'yojulabdb', charset = 'utf8', autocommit = True)
+conn = pymysql.connect(host = '172.17.0.3', port = 3306, user = 'scott', passwd = 'tiger', db = 'yojulabdb', charset = 'utf8', autocommit = True)
 cursor = conn.cursor()
 query = 'INSERT INTO economic (title, link) Values (%s,%s)'
 for info in board_info:
